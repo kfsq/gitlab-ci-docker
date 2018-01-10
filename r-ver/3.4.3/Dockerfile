@@ -1,6 +1,6 @@
 FROM rocker/r-ver:3.4.3
 
-LABEL org.label-schema.license="MPL-2.0" \
+LABEL org.label-schema.license="GPL-2.0,MPL-2.0" \
       org.label-schema.vcs-url="https://github.com/kfsq/gitlab-ci-docker" \
       org.label-schema.vendor="Docker images for use with GitLab CI" \
       maintainer="Kristoffer Winther Balling <kfsq@novonordisk.com>"
