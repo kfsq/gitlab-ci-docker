@@ -18,6 +18,8 @@ RUN apt-get update \
   # Debian packages Java (for rJava)
   libbz2-dev \
   openjdk-7-jdk \
+  # Debian packages pandoc (for rmarkdown/knitr)
+  pandoc \
   # Configure Java for R (for rJava)
   && R CMD javareconf \
   ## Install R packages
@@ -34,7 +36,14 @@ RUN apt-get update \
   'matrixStats', \
   'whisker', \
   'digest', \
-  'RJDBC' \
+  'RJDBC', \
+  'htmlwidgets', \
+  'testthat', \
+  'plyr', \
+  'dplyr', \
+  'rmarkdown', \
+  'assertive', \
+  'ISOweek' \
   ))" \
   ## Clean up
   && cd / \

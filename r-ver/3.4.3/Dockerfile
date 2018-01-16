@@ -22,6 +22,8 @@ RUN apt-get update \
   # Debian packages Java (for rJava)
   libbz2-dev \
   openjdk-8-jdk \
+  # Debian packages pandoc (for rmarkdown/knitr)
+  pandoc \
   # Configure Java for R (for rJava)
   && R CMD javareconf \
   ## Install R packages
@@ -46,7 +48,24 @@ RUN apt-get update \
   'sp', \
   'whisker', \
   'digest', \
-  'RJDBC' \
+  'RJDBC', \
+  'htmlwidgets', \
+  'testthat', \
+  'plyr', \
+  'dplyr', \
+  'rmarkdown', \
+  'assertive', \
+  'ISOweek', \
+  'choroplethr', \
+  'choroplethrMaps', \
+  'rgeos', \
+  'rgdal', \
+  'maptools', \
+  'leaflet', \
+  'scales', \
+  'mapview', \
+  'tmap', \
+  'tmaptools' \
   ))" \
   ## Clean up
   && cd / \
