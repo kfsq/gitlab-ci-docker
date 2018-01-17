@@ -20,7 +20,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | \
   lmodern \
   pandoc \
   ## Ubuntu packages for including .ps files
-  ghostcript \
+  ghostscript \
   ## Ubuntu packages for add-apt-repo and Fira install script
   software-properties-common \
   wget \
