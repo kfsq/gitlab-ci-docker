@@ -19,6 +19,8 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | \
   texlive-fonts-extra \
   lmodern \
   pandoc \
+  ## Ubuntu packages for including .ps files
+  ghostcript \
   ## Ubuntu packages for add-apt-repo and Fira install script
   software-properties-common \
   wget \
