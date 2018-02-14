@@ -24,6 +24,8 @@ RUN apt-get update \
   openjdk-8-jdk \
   # Debian packages pandoc (for rmarkdown/knitr)
   pandoc \
+  # Debian packages for gdtools/tmap/mapview
+  libcairo2-dev \
   # Configure Java for R (for rJava)
   && R CMD javareconf \
   ## Install R packages
@@ -65,7 +67,8 @@ RUN apt-get update \
   'scales', \
   'mapview', \
   'tmap', \
-  'tmaptools' \
+  'tmaptools', \
+  'rmapshaper' \
   ))" \
   ## Clean up
   && cd / \
