@@ -68,7 +68,8 @@ RUN apt-get update \
   'mapview', \
   'tmap', \
   'tmaptools', \
-  'rmapshaper' \
+  'rmapshaper', \
+  'shinycssloaders' \
   ))" \
   ## Clean up
   && cd / \
