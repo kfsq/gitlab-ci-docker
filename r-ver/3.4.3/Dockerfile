@@ -69,7 +69,8 @@ RUN apt-get update \
   'tmap', \
   'tmaptools', \
   'rmapshaper', \
-  'shinycssloaders' \
+  'shinycssloaders', \
+  'rprojroot' \
   ))" \
   ## Clean up
   && cd / \
