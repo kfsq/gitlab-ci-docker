@@ -25,6 +25,20 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | \
   software-properties-common \
   wget \
   sudo \
+  ## Xaringan and decktape
+  curl \
+  libpython2.7 \
+  libx11-xcb1 \
+  libxcomposite-dev \
+  libxcursor-dev \
+  libxdamage-dev \
+  libxtst-dev \
+  libnss3 \
+  chromium-browser \
+  libgconf-2-4 \
+  && curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - \
+  && apt-get install -y nodejs \
+  && npm install decktape \
   ## Install Metropolis theme for Beamer presentations
   && add-apt-repository -y ppa:edd/misc \
   && apt-get update \
@@ -36,7 +50,10 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | \
   ## Install R packages
   && Rscript -e "install.packages(c( \
   'knitr', \
-  'rmarkdown' \
+  'rmarkdown', \
+  'xaringan', \
+  'ggplot2', \
+  'reticulate' \
   ), repos = 'http://cran.rstudio.com')" \
   ## Clean up
   && cd / \

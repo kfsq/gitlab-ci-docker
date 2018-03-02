@@ -26,6 +26,20 @@ RUN apt-get update \
   pandoc \
   # Debian packages for gdtools/tmap/mapview
   libcairo2-dev \
+  ## Xaringan and decktape
+  curl \
+  libpython2.7 \
+  libx11-xcb1 \
+  libxcomposite-dev \
+  libxcursor-dev \
+  libxdamage-dev \
+  libxtst-dev \
+  libnss3 \
+  chromium-browser \ 
+  libgconf-2-4 \
+  && curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - \
+  && apt-get install -y nodejs \
+  && npm install decktape \
   # Configure Java for R (for rJava)
   && R CMD javareconf \
   ## Install R packages
@@ -70,7 +84,9 @@ RUN apt-get update \
   'tmaptools', \
   'rmapshaper', \
   'shinycssloaders', \
-  'rprojroot' \
+  'rprojroot', \
+  'xaringan', \
+  'reticulate' \
   ))" \
   ## Clean up
   && cd / \
