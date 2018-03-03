@@ -37,6 +37,7 @@ RUN apt-get update \
   libnss3 \
   chromium \ 
   libgconf-2-4 \
+  gnupg2 \
   && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
   && apt-get install -y nodejs \
   && npm install decktape \
