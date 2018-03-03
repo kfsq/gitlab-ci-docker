@@ -35,9 +35,9 @@ RUN apt-get update \
   libxdamage-dev \
   libxtst-dev \
   libnss3 \
-  chromium-browser \ 
+  chromium \ 
   libgconf-2-4 \
-  && curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - \
+  && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
   && apt-get install -y nodejs \
   && npm install decktape \
   # Configure Java for R (for rJava)
